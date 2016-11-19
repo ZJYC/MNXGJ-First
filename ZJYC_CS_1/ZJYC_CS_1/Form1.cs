@@ -47,7 +47,7 @@ namespace ZJYC_CS_1
             InitializeComponent();
             toolStripStatusLabel1.Text = DateTime.Now.ToLongDateString() + "  "+ DateTime.Now.ToLongTimeString();
             textBox3.Text = CurPath;
-            MessageBox.Show("本程序目录下不允许存在非‘XXXX--XX--XX--XX--XX--XX’格式的文件夹，否则出错，切记");
+            MessageBox.Show("ZJYC：本程序目录下不允许存在非‘XXXX--XX--XX--XX--XX--XX’格式的文件夹，否则出错，切记");
             Initial();
         }
         public void Initial()
@@ -620,6 +620,19 @@ namespace ZJYC_CS_1
         private void button11_MouseEnter(object sender, EventArgs e)
         {
             DisplayHelp("复制源文件模板到剪切板");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            DateTime CurTime = DateTime.Now;
+            String str = 
+                CurTime.Year.ToString("D4") + "--" +
+                CurTime.Month.ToString("D2") + "--" +
+                CurTime.Day.ToString("D2") + "--" +
+                CurTime.Hour.ToString("D2") + "--" +
+                CurTime.Minute.ToString("D2") + "--" +
+                CurTime.Second.ToString("D2") + "(ZJYC): ";
+            Clipboard.SetDataObject(str);
         }
     }
 }

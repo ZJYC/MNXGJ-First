@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ZJYC_CS_1.exe" size="942592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ZJYC_CS_1.exe" size="947712">
       <assemblyIdentity name="ZJYC_CS_1" version="3.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vwBzVz7FmzNwn5umYjLgT/hJln0=</dsig:DigestValue>
+        <dsig:DigestValue>tri3qZmj4Q6MF0ilEO5Wqm/2imM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

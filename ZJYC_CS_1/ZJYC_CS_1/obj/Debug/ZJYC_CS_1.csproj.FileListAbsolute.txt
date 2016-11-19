@@ -134,3 +134,17 @@ D:\ziliaobeifen\C#项目管理\2016--10--15--20--23--07\ZJYC_CS_1\ZJYC_CS_1\bin\
 D:\ziliaobeifen\C#项目管理\2016--10--15--20--23--07\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.TrustInfo.xml
 D:\ziliaobeifen\C#项目管理\2016--10--15--20--23--07\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.exe.manifest
 D:\ziliaobeifen\C#项目管理\2016--10--15--20--23--07\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.application
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\bin\Debug\ZJYC_CS_1.exe.config
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.exe
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.pdb
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\bin\Debug\ZJYC_CS_1.exe.manifest
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\bin\Debug\ZJYC_CS_1.application
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\bin\Debug\ZJYC_CS_1.exe
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\bin\Debug\ZJYC_CS_1.pdb
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.csprojResolveAssemblyReference.cache
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.Form1.resources
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.Properties.Resources.resources
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.csproj.GenerateResource.Cache
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.TrustInfo.xml
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.exe.manifest
+C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Debug\ZJYC_CS_1.application
