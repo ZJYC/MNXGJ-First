@@ -141,4 +141,3 @@ C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\R
 C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Release\ZJYC_CS_1.TrustInfo.xml
 C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Release\ZJYC_CS_1.exe.manifest
 C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Release\ZJYC_CS_1.application
-C:\Users\Zhaojingyangchun\Documents\GitHub\MNXGJ-First\ZJYC_CS_1\ZJYC_CS_1\obj\Release\ZJYC_CS_1.csprojResolveAssemblyReference.cache

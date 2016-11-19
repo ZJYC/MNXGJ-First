@@ -625,7 +625,7 @@ namespace ZJYC_CS_1
         private void button12_Click(object sender, EventArgs e)
         {
             DateTime CurTime = DateTime.Now;
-            String str = 
+            String str = "//" +
                 CurTime.Year.ToString("D4") + "--" +
                 CurTime.Month.ToString("D2") + "--" +
                 CurTime.Day.ToString("D2") + "--" +
