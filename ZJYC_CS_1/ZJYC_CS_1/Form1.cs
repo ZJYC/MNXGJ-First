@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ZJYC_CS_DIR;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.InteropServices;
 
 namespace ZJYC_CS_1
 {
@@ -39,9 +40,17 @@ namespace ZJYC_CS_1
         String Str_LogFile = "Log.txt";
         string Lated_Dir = "";
         String CurPath = Environment.CurrentDirectory;
+        bool IsKeyRegister = false;
         ConfigInf Config = new ConfigInf();
         ResultBinary resultBinary = new ResultBinary();
         ZJYC_CS_DIR.DirOperate DirOperate_Temp = new ZJYC_CS_DIR.DirOperate();
+        //注册热键的api
+        [DllImport("user32")]
+        public static extern bool RegisterHotKey(IntPtr hWnd, int id, uint control, Keys vk);
+        //解除注册热键的api
+        [DllImport("user32")]
+        public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
+
         public Form1()
         {
             InitializeComponent();
@@ -621,18 +630,46 @@ namespace ZJYC_CS_1
         {
             DisplayHelp("复制源文件模板到剪切板");
         }
-
         private void button12_Click(object sender, EventArgs e)
         {
-            DateTime CurTime = DateTime.Now;
-            String str = "/*" +
-                CurTime.Year.ToString("D4") + "--" +
-                CurTime.Month.ToString("D2") + "--" +
-                CurTime.Day.ToString("D2") + "--" +
-                CurTime.Hour.ToString("D2") + "--" +
-                CurTime.Minute.ToString("D2") + "--" +
-                CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
-            Clipboard.SetDataObject(str);
+            if (IsKeyRegister == false)
+            {
+                if (RegisterHotKey(this.Handle, 123, 6, Keys.Z) == true) { IsKeyRegister = true; }
+                MessageBox.Show("已经注册热键“Ctrl+Shift+Z”,你就不用再点这个按钮了。");
+                //RegisterHotKey(this.Handle, 456, 6, Keys.W);
+                DateTime CurTime = DateTime.Now;
+                String str = "/*" +
+                    CurTime.Year.ToString("D4") + "--" +
+                    CurTime.Month.ToString("D2") + "--" +
+                    CurTime.Day.ToString("D2") + "--" +
+                    CurTime.Hour.ToString("D2") + "--" +
+                    CurTime.Minute.ToString("D2") + "--" +
+                    CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
+                Clipboard.SetDataObject(str);
+            }
         }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x0312:  //这个是window消息定义的注册的热键消息  
+                    if (m.WParam.ToString() == "123")   // 按下CTRL+Q隐藏  
+                    {
+                        DateTime CurTime = DateTime.Now;
+                        String str = "/*" +
+                            CurTime.Year.ToString("D4") + "--" +
+                            CurTime.Month.ToString("D2") + "--" +
+                            CurTime.Day.ToString("D2") + "--" +
+                            CurTime.Hour.ToString("D2") + "--" +
+                            CurTime.Minute.ToString("D2") + "--" +
+                            CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
+                        Clipboard.SetDataObject(str);
+
+                    }
+                    break;
+            }
+            base.WndProc(ref m);
+        }
+
     }
 }
