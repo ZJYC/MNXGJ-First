@@ -40,7 +40,8 @@ namespace ZJYC_CS_1
         String Str_LogFile = "Log.txt";
         string Lated_Dir = "";
         String CurPath = Environment.CurrentDirectory;
-        bool IsKeyRegister = false;
+        bool IsKeyRegister_Comment = false;
+        bool IsKeyRegister_Timestring = false;
         ConfigInf Config = new ConfigInf();
         ResultBinary resultBinary = new ResultBinary();
         ZJYC_CS_DIR.DirOperate DirOperate_Temp = new ZJYC_CS_DIR.DirOperate();
@@ -425,28 +426,34 @@ namespace ZJYC_CS_1
 
         private void button7_Click(object sender, EventArgs e)
         {
-            DateTime CurTime = DateTime.Now;
-            String TimeString = "";
-            //长字符串，包括分秒
-            if (checkBox3.Checked == true)
+            if (IsKeyRegister_Timestring == false)
             {
-                TimeString =
-                CurTime.Year.ToString("D4") + "--" +
-                CurTime.Month.ToString("D2") + "--" +
-                CurTime.Day.ToString("D2") + "--" +
-                CurTime.Hour.ToString("D2") + "--" +
-                CurTime.Minute.ToString("D2") + "--" +
-                CurTime.Second.ToString("D2");
+                if (RegisterHotKey(this.Handle, 124, 6, Keys.A) == true) { IsKeyRegister_Timestring = true; }
+                MessageBox.Show("已经注册热键“Ctrl+Shift+A”,你就不用再点这个按钮了。");
+
+                DateTime CurTime = DateTime.Now;
+                String TimeString = "";
+                //长字符串，包括分秒
+                if (checkBox3.Checked == true)
+                {
+                    TimeString =
+                    CurTime.Year.ToString("D4") + "--" +
+                    CurTime.Month.ToString("D2") + "--" +
+                    CurTime.Day.ToString("D2") + "--" +
+                    CurTime.Hour.ToString("D2") + "--" +
+                    CurTime.Minute.ToString("D2") + "--" +
+                    CurTime.Second.ToString("D2");
+                }
+                else//不包括分秒
+                {
+                    TimeString =
+                    CurTime.Year.ToString("D4") + "--" +
+                    CurTime.Month.ToString("D2") + "--" +
+                    CurTime.Day.ToString("D2") + "--" +
+                    CurTime.Hour.ToString("D2");
+                }
+                Clipboard.SetDataObject(TimeString);
             }
-            else//不包括分秒
-            {
-                TimeString =
-                CurTime.Year.ToString("D4") + "--" +
-                CurTime.Month.ToString("D2") + "--" +
-                CurTime.Day.ToString("D2") + "--" +
-                CurTime.Hour.ToString("D2");
-            }
-            Clipboard.SetDataObject(TimeString);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -632,9 +639,9 @@ namespace ZJYC_CS_1
         }
         private void button12_Click(object sender, EventArgs e)
         {
-            if (IsKeyRegister == false)
+            if (IsKeyRegister_Comment == false)
             {
-                if (RegisterHotKey(this.Handle, 123, 6, Keys.Z) == true) { IsKeyRegister = true; }
+                if (RegisterHotKey(this.Handle, 123, 6, Keys.Z) == true) { IsKeyRegister_Comment = true; }
                 MessageBox.Show("已经注册热键“Ctrl+Shift+Z”,你就不用再点这个按钮了。");
                 //RegisterHotKey(this.Handle, 456, 6, Keys.W);
                 DateTime CurTime = DateTime.Now;
@@ -665,6 +672,31 @@ namespace ZJYC_CS_1
                             CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
                         Clipboard.SetDataObject(str);
 
+                    }
+                    if(m.WParam.ToString() == "124")
+                    {
+                        DateTime CurTime = DateTime.Now;
+                        String TimeString = "";
+                        //长字符串，包括分秒
+                        if (checkBox3.Checked == true)
+                        {
+                            TimeString =
+                            CurTime.Year.ToString("D4") + "--" +
+                            CurTime.Month.ToString("D2") + "--" +
+                            CurTime.Day.ToString("D2") + "--" +
+                            CurTime.Hour.ToString("D2") + "--" +
+                            CurTime.Minute.ToString("D2") + "--" +
+                            CurTime.Second.ToString("D2");
+                        }
+                        else//不包括分秒
+                        {
+                            TimeString =
+                            CurTime.Year.ToString("D4") + "--" +
+                            CurTime.Month.ToString("D2") + "--" +
+                            CurTime.Day.ToString("D2") + "--" +
+                            CurTime.Hour.ToString("D2");
+                        }
+                        Clipboard.SetDataObject(TimeString);
                     }
                     break;
             }
