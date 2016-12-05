@@ -645,13 +645,21 @@ namespace ZJYC_CS_1
                 MessageBox.Show("已经注册热键“Ctrl+Shift+Z”,你就不用再点这个按钮了。");
                 //RegisterHotKey(this.Handle, 456, 6, Keys.W);
                 DateTime CurTime = DateTime.Now;
-                String str = "/*" +
-                    CurTime.Year.ToString("D4") + "--" +
-                    CurTime.Month.ToString("D2") + "--" +
-                    CurTime.Day.ToString("D2") + "--" +
-                    CurTime.Hour.ToString("D2") + "--" +
-                    CurTime.Minute.ToString("D2") + "--" +
-                    CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
+                String str = "";
+                if (checkBox7.Checked == true)
+                {
+                    str = "/*" +
+                        CurTime.Year.ToString("D4") + "--" +
+                        CurTime.Month.ToString("D2") + "--" +
+                        CurTime.Day.ToString("D2") + "--" +
+                        CurTime.Hour.ToString("D2") + "--" +
+                        CurTime.Minute.ToString("D2") + "--" +
+                        CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
+                }
+                else
+                {
+                    str = "/*  */";
+                }
                 Clipboard.SetDataObject(str);
             }
         }
@@ -663,17 +671,25 @@ namespace ZJYC_CS_1
                     if (m.WParam.ToString() == "123")   // 按下CTRL+Q隐藏  
                     {
                         DateTime CurTime = DateTime.Now;
-                        String str = "/*" +
-                            CurTime.Year.ToString("D4") + "--" +
-                            CurTime.Month.ToString("D2") + "--" +
-                            CurTime.Day.ToString("D2") + "--" +
-                            CurTime.Hour.ToString("D2") + "--" +
-                            CurTime.Minute.ToString("D2") + "--" +
-                            CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
+                        String str = "";
+                        if (checkBox7.Checked == true)
+                        {
+                            str = "/*" +
+                                CurTime.Year.ToString("D4") + "--" +
+                                CurTime.Month.ToString("D2") + "--" +
+                                CurTime.Day.ToString("D2") + "--" +
+                                CurTime.Hour.ToString("D2") + "--" +
+                                CurTime.Minute.ToString("D2") + "--" +
+                                CurTime.Second.ToString("D2") + "(ZJYC):    */ ";
+                        }
+                        else
+                        {
+                            str = "/*  */";
+                        }
                         Clipboard.SetDataObject(str);
 
                     }
-                    if(m.WParam.ToString() == "124")
+                    if (m.WParam.ToString() == "124")
                     {
                         DateTime CurTime = DateTime.Now;
                         String TimeString = "";
